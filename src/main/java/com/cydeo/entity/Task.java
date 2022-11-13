@@ -24,12 +24,12 @@ public class Task extends BaseEntity{
     @JoinColumn(name="project_id")
     private Project project;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="employee_id")
+    @JoinColumn(name="assigned_employee_id")
     private User assignedEmployee;
     private String taskSubject;
     private String taskDetail;
     private LocalDate assignedDate;
     @Enumerated(EnumType.STRING)
-    private Status status;
+    private Status taskStatus;
 
 }
