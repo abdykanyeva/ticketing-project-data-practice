@@ -20,6 +20,9 @@ import java.time.LocalDate;
 @Where(clause = "is_deleted = false")
 public class Project extends BaseEntity{
 
+    private Boolean isDeleted = false;
+
+    @Column(unique = true)
     private String projectCode;
     private String projectName;
     private LocalDate startDate;
