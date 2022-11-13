@@ -71,4 +71,14 @@ public class TaskServiceImpl implements TaskService {
 
         return taskMapper.convertToDTO(task);
     }
+
+    @Override
+    public int totalNonCompletedTask(String projectCode) {
+        return taskRepository.totalNonCompletedTask(projectCode);
+    }
+
+    @Override
+    public int totalCompletedTask(String projectCode) {
+        return taskRepository.totalCompletedTask(projectCode);
+    }
 }
